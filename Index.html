@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/invitacion_halloween.css">
+    <link rel="shortcut icon" type="image/jpg" href="./images/favicon_calabaza.png">
+    <script src="javascripts/invitacion_halloween.js"></script>
+    <title>Halloween Invitation</title>
+</head>
+<body onload="sonar('this_is_halloween')"> <!-- Establezco el sonido de fondo en el body, (dependiendo el navegador se escucha o no, en firefox si se escucha.)-->
+    <audio id="door_squeak">
+        <source src="./sounds/door_squeak/door squeak.mp3" type="audio/mp3"> <!-- Sonido puerta abriendose-->
+    </audio> 
+    <audio id="open_letter">
+        <source src="./sounds/open_letter/open_letter.mp3" type="audio/mp3"> <!-- Sonido carta abriendose-->
+    </audio>
+    <audio id="this_is_halloween">
+        <source src="./sounds/this_is_halloween/this is halloween.webm" type="audio/mp3"> <!-- Sonido cancion "This is halloween"-->
+    </audio>
+    <audio id="howling_Wolf">
+        <source src="./sounds/Aullido_lobo/Aullido_lobo.mp3" >  <!-- Sonido aullido de lobo-->
+    </audio>
+
+    <div id="container">    <!-- Contenedor Principal-->
+
+        <!-- CARTA / LETTER-->
+        <div id="letter" onclick="mostrar('carta');ocultar('letter');sonar('open_letter')"> <!-- Contendor de la carta sin abrir-->
+            <img  src="./images/letter.png" alt="">
+            <p>HALLOWEEN PARTY INVITATION</p>
+        </div>
+        
+        <div id="carta">    <!-- Contendor de la carta abierta-->
+            <h1 id="titulo">HALLOWEEN PARTY</h1>    <!-- Titulo de la carta-->
+            <p>A Halloween party is held in my terrifying house that is located on the top of the hill,in order to come before you must come visit me with this letter just so I can see your face, then I will write the date on it.Remember to come alone.</p>
+            <p>I'll be waiting for you by the fireplace.<img id="hoguera" src="images/hoguera.png" alt="hoguera"></p> <!-- Texto y Imagen de hoguera-->
+            <h1 id="answer" class="date">at 10 o'clock on October 30</h1> <!-- Fecha de la fiesta (se pondrá automaticamente tras visitar la casa). -->
+        </div>
+
+        <!-- FIN CARTA / LETTER -->
+
+        <!-- PUERTA -->
+
+        <div id="llamar_puerta"> <!-- Contenedor del texto que avisa de que la puerta esta abierta -->
+            <p>THE DOOR </p> 
+            <p>IS OPEN</p>
+        </div>
+        <img id="puerta_abierta" src="./images/open_door.png" alt="open door"> <!-- Imagen de la puerta abierta (puerta amarilla)-->
+
+            <div id="puerta" onmouseover="mostrar('puerta_abierta');sonar('door_squeak')" 
+            onmouseout="ocultar('puerta_abierta');parar('door_squeak');mostrar('answer')"></div> <!-- Contenedor para establecer la animacion al interactuar con la puerta -->   
+
+        <!-- FIN PUERTA -->
+
+        <!-- LUNA -->
+
+        <div id="text_luna_llena"> <!-- Contenedor del texto que te avisa que hay luna llena. -->
+            <p>
+                TODAY IS FULL MOON
+            </p>
+        </div>
+        
+        <div id="luna" onclick="mostrar('wolf');sonar('howling_Wolf')" ></div> <!-- Contenedor para establecer la animacion al interactuar con la luna -->       
+        <img  id="wolf" src="./images/wolf.png" alt="wolf"> <!-- Imagen del lobo-->
+
+        <!-- FIN LUNA-->
+
+    </div>
+</body>
+</html>

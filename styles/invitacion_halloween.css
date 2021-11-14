@@ -1,0 +1,186 @@
+
+/* Fuentes Importadas */
+@font-face {
+    font-family: blood;
+    src: url(../fonts/BLOODY.TTF);
+}
+@font-face {
+    font-family: puerta;
+    src: url(../fonts/The\ Deep\ Horror.otf);
+}
+@font-face {
+    font-family: carta;
+    src: url(../fonts/Louis\ George\ Cafe\ Light\ Italic.ttf);
+}
+
+/*Fin fuentes importadas*/
+
+
+body {
+    background-color: black; /*Fondo negro*/
+    color: white; /**/
+}
+div#container {
+    background-image: url(../images/wallpaper.png);     /*Establecemos un fondo de imagen al contenedor*/
+    height: 1080px;     /*Establecemos el alto del contendor, que en esta caso se correspondera tambien con el alto de la imagen de fondo*/
+    width:1920px;   /*Establecemos el ancho del contendor, que en esta caso se correspondera tambien con el ancho de la imagen de fondo*/
+    margin: auto;   /*Centrar*/
+    background-repeat: no-repeat;   /*Para que la imagen de fondo no se repita*/
+    position: relative;     /* Para que la imagen se mueva en función del tamaño de la pantalla*/
+}
+
+/*Estilos carta abierta*/
+div#carta {
+    background-image: url(../images/old\ paper2.png);
+    float: left;
+    position: absolute;     /*Fijar el elemento*/
+    left: 175px;
+    margin-top: 10%;
+    color: black;
+    width: 559px;
+    height: 681px;
+    background-repeat: no-repeat;
+    visibility: hidden;     /*Hacer que no se vea (luego se activara mediante Javascript)*/
+}
+div#carta p {
+    font-size: 1.30em;
+    padding: 0px 70px;
+    line-height: 300%;
+    text-align: justify;
+    font-family: carta;
+    color: rgb(255, 255, 255);
+    /* -webkit-text-stroke: 0.025em rgb(0, 0, 0) */
+}
+#titulo {
+    font-size: 1.50em;      /*El titulo sera la mitad mas grande en cuanto a tamaño de letra*/
+    text-align: center;     /*Centrar el titulo*/
+    letter-spacing: 0.3em;
+    padding-top: 75px;
+    padding-bottom: 10px;
+    font-family: blood;
+    color: rgb(194, 36, 36);
+    text-shadow: 1px 5px 5px rgb(228, 107, 153);    /*Establecer un sombreado */
+    -webkit-text-stroke: 0.025em rgb(0, 0, 0)       /*Poner trazado en el texto*/
+}
+
+div#carta img { 
+    height: 35px;
+    width: 35px;
+    float: right;
+    position: absolute;
+    left: 390px;
+    bottom: 158px;
+}
+#answer {
+    position: absolute;
+    visibility: hidden;     /*Hacer que no se vea (luego se activara mediante Javascript)*/
+    line-height: 50px;
+    padding-right: 50px;
+}
+.date {
+    font-size: 1.50em;
+    text-align: center;
+    letter-spacing: 0.3em;
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    font-family: blood;
+    color: rgb(243, 4, 4);
+    -webkit-text-stroke: 0.025em rgb(0, 0, 0);      /*Poner trazado en el texto*/
+    margin: 0px 40px;       /*0 de margen arriba y abajo y 40 a cada lado*/
+}
+/*Fin estilos carta*/
+
+/*Estilos puerta*/
+#puerta_abierta {
+    position: absolute;
+    right: 527px;;
+    bottom: 286px;
+    visibility: hidden;     /*Hacer que no se vea (luego se activara mediante Javascript)*/
+}
+#llamar_puerta {
+    position: absolute;
+    right: 500px;
+    bottom: 380px;
+    font-size: 1.10em;
+}
+#llamar_puerta p{
+    font-size: 1.10em;
+    font-family: puerta;
+    letter-spacing: 0.2em;      /*Estableces la separación entre letras*/
+    line-height: 0.7em;         /*Estableces la separación entre líneas*/
+    color: rgb(255, 255, 255);
+    text-shadow:-1px -1px 5px rgb(241, 239, 101);       /*Establecer un sombreado */
+    text-align: center;     /*Centrar texto*/
+}
+div#puerta {
+    background-color: rgba(255, 255, 255, 0);       /*Hacerlo transparante, en este caso lo he hecho quitando la opacidad al color*/
+    right: 527px;
+    bottom: 285px;
+    position: absolute;
+    width: 57px;
+    height: 89px;
+}
+/*Fin estilos puerta*/
+
+/*Estilos carta sin abrir*/
+
+#letter {
+    width: 400px;
+    height: 400px;
+    left: 250px;
+    margin-top: 300px;
+    position: absolute;
+    cursor: pointer;
+}
+#letter img {
+    width: 400px;
+    height: 400px;
+}
+
+div#letter p {
+    color: red;
+    font-family: puerta;
+    position: absolute;
+    bottom: 90px;
+    left: 85px;
+    font-size: 1.4em;
+    transform: rotate(-10deg);      /*Rotar/Inclinar el texto*/
+}
+/*Fin estilos carta*/
+
+/*Estilos Luna*/
+#text_luna_llena {
+    float: right;
+    margin-right: 9%;
+    margin-top: 14%;
+
+}
+#text_luna_llena p{
+    color:rgb(255, 255, 255);
+    text-shadow:5px 5px 5px rgb(50, 32, 209);       /*Establecer sombreado*/
+    font-size: 1.20em;
+    font-family: 'Times New Roman', Times, serif;
+}
+div#luna {
+    background-color: rgba(255, 255, 255, 0);
+    width: 650px;
+    height: 600px;
+    position: absolute;
+    right: 400px;
+    top: 20px;
+    cursor: pointer;
+
+}
+#wolf {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 400px;
+    visibility: hidden;
+}
+/*Fin estilos Luna*/
+
+
+
